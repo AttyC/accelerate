@@ -25,22 +25,44 @@ get_header(); ?>
 	</div><!-- .container -->
 </section><!-- .home-page -->
 
+<section class="homepage-featured-work">
+  <div class="site-content">
+    <h4>Featured Work</h4>
+
+      <?php query_posts('posts_per_page=3&post_type=case_studies');?>
+
+        <?php while (have_posts() ) : the_post(); 
+          $image = get_field("image_1");
+          $size = "medium"; 
+        ?>
+    
+          <figure>
+            <?php echo wp_get_attachment_image( $image, $size); ?>
+          </figure>
+          <h5><a href="<?php the_permalink(); ?>">  <?php the_title(); ?> </a></h5>
+
+        <?php endwhile; ?> <!-- end loop -->
+      <?php wp_reset_query(); ?> <!-- resets query back to original -->
+  </div>
+  </div>
+
+
+</section>
+
 <section class="recent-posts">
   <div class="site-content">
     <div class="blog-post">
       <h4>From the Blog</h4>
-     <?php query_posts('posts_per_page=1');?>
+      <?php query_posts('posts_per_page=1');?>
 
- 
         <?php while (have_posts() ) : the_post(); ?> <!-- loop thru posts -->
 
           <h2><?php the_title(); ?></h2>
           <?php the_excerpt(); ?>
           <a href="<?php the_permalink(); ?>" class="read-more-link">Read more <span>&rsaquo;</span></a>
 
-          <?php wp_reset_query(); ?> <!-- resets query back to original -->
-
         <?php endwhile; ?> <!-- end loop -->
+      <?php wp_reset_query(); ?> <!-- resets query back to original -->
     </div>
   </div>
 </section>
