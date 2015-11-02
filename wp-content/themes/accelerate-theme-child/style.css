@@ -26,7 +26,14 @@ div#primary {
 .homepage-featured-work .site-content {
   text-align: center;
 }
-
+.homepage-featured-work ul {
+  list-style-type: none;
+}
+.homepage-featured-work li {
+  display: inline-block;
+  float: left;
+  margin: 0 2em;
+}
 h1, h2, h3, h4, h5, h6 {
   margin: 18px 0 14px;
   }

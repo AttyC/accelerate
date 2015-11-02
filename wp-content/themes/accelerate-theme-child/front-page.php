@@ -29,21 +29,26 @@ get_header(); ?>
   <div class="site-content">
     <h4>Featured Work</h4>
 
-      <?php query_posts('posts_per_page=3&post_type=case_studies');?>
+    <?php query_posts('posts_per_page=3&post_type=case_studies');?>
 
-        <?php while (have_posts() ) : the_post(); 
-          $image = get_field("image_1");
-          $size = "medium"; 
-        ?>
-    
-          <figure>
+      <?php while (have_posts() ) : the_post(); 
+        $image = get_field("image_1");
+        $size = "medium"; 
+      ?>
+      <ul>
+        <li>
+
+          <a href="<?php the_permalink(); ?>"> 
             <?php echo wp_get_attachment_image( $image, $size); ?>
-          </figure>
-          <h5><a href="<?php the_permalink(); ?>">  <?php the_title(); ?> </a></h5>
+          </a>
 
-        <?php endwhile; ?> <!-- end loop -->
+        <h5><a href="<?php the_permalink(); ?>">  <?php the_title(); ?> </a></h5>
+        </li>
+ 
+      <?php endwhile; ?> <!-- end loop -->
       <?php wp_reset_query(); ?> <!-- resets query back to original -->
-  </div>
+      </ul>
+    </div>
   </div>
 
 
