@@ -11,7 +11,9 @@
 */
 
 @import url("../accelerate-theme/style.css");
-
+div#primary {
+  margin-top: 60px;
+}
 .home-page {
   background: url("img/taxi-photo.jpg") no-repeat scroll left center / cover rgba(0, 0, 0, 0);
   margin: 0 0 60px;
@@ -25,12 +27,20 @@
   text-align: center;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 18px 0 14px;
+  }
+h2 {
+  font-size: 26px;
+}
+
 h5 {
   font-size: 14px;
-  color: #6B6B6B;
+  color: #8A8686;
+  font-weight: 300;
 }
 h5 a {
-  color:#6B6B6B;
+  color:#8A8686;
   font-weight: 600;
 }
 .homepage-featured-work h5 {
@@ -43,7 +53,10 @@ h5 a {
 .nav-menu li {
   display: inline-block;
   padding: 0 10px;
+  text-transform: uppercase;
+  font-size: 0.9em;
 }
+
 .button {
     background: none repeat scroll 0 0 #45ac9d;
 }
@@ -97,4 +110,5 @@ div.case-study-images img {
 }
 .case-study p.link {
   font-weight: bold;
+  font-size: 0.9em;
 }
