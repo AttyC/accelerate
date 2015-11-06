@@ -18,16 +18,16 @@ div#primary {
   background: url("img/taxi-photo.jpg") no-repeat scroll left center / cover rgba(0, 0, 0, 0);
   margin: 0 0 60px;
 }
-.homepage-featured-work h4 {
+.homepage-featured-work h4, .about-featured-services h4 {
   font-size: 0.9em;
   text-transform: uppercase;
-  margin: 0 0 50px;
 }
 .homepage-featured-work .site-content {
   text-align: center;
 }
 .homepage-featured-work ul {
   list-style-type: none;
+  margin: 50px 0 0 0;
 }
 .homepage-featured-work li {
   display: inline-block;
@@ -40,7 +40,17 @@ h1, h2, h3, h4, h5, h6 {
 h2 {
   font-size: 26px;
 }
-
+h3 {
+  font-weight: normal;
+  font-size: 1.5em;
+}
+.home-page h3 {
+    color: #fff;
+    text-align: center;
+    line-height: 1.5em;
+    width: 60%;
+    margin: auto;
+}
 h5 {
   font-size: 14px;
   color: #8A8686;
@@ -118,4 +128,85 @@ div.case-study-images img {
 .case-study p.link {
   font-weight: bold;
   font-size: 0.9em;
+}
+/* Contact form */
+
+#ninja_forms_form_1_cont, .page-id-47348 .site-content h2, .page-id-47348 .site-content p {
+  width: 70%;
+  margin: auto;
+}
+.page-id-47348 .site-content p {
+  margin: 20px auto;
+}
+/* form fields */
+form label {
+  font-size: 0.8em;
+}
+#ninja_forms_field_1_div_wrap, #ninja_forms_field_2_div_wrap {
+  width: 48%;
+  float: left;
+}
+#ninja_forms_field_1_div_wrap {
+  margin-right: 4%;
+}
+#ninja_forms_field_1, #ninja_forms_field_2 {
+  padding: 10px;
+} 
+/* form button */
+#ninja_forms_field_5 {
+    float: right;
+    background-color: #45ac9d;
+    width: 30%;
+    padding: 20px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+#ninja_forms_form_1_response_msg {
+  font-weight: bold;
+}
+
+/* About page */
+.accelerate {
+  color: #45ac9d;
+}
+.about-featured-services h4, p.services-intro {
+  text-align: center;
+
+}
+.featured-service {
+  margin: 20px 0;
+}
+
+.flex {
+  display: flex;
+  display: -webkit-flex;
+}
+.flex_rtl {
+  flex-direction: row-reverse;
+  -webkit-flex-direction: row-reverse;
+}
+
+.featured-service-image {
+  margin: 0 0 0 1.5em ;
+}
+.flex_rtl .featured-service-image {
+  margin: 0 1.5em 0 0;
+}
+ul.contact-us-action {
+  clear: both;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 2em;
+  list-style-type: none;
+  text-align: center;
+  padding: 1.5em;
+  margin: 0;
+}
+.contact-us-action li {
+  display: inline-block;
+  margin: 15px;
+}
+.contact-us-action a.button {
+  padding: 15px 60px;
 }
